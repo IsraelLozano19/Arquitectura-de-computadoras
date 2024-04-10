@@ -123,46 +123,31 @@ void loop() {
       digitalWrite(13, LOW); //RESIDUO 1
     }
   }
-
-  //AND
+//AND
   if (X && !Y && Z) {
-    if (C && D) {
-      digitalWrite(11, HIGH); //SEGUNDO BIT
+    if (A && B && C && D) {
+      digitalWrite(13, HIGH);
     } else {
-      digitalWrite(11, LOW); //SEGUNDO BIT
-    }
-    if (A && B) {
-      digitalWrite(13, HIGH); //PRIMER BIT
-    } else {
-      digitalWrite(13, LOW); //PRIMER BIT
+      digitalWrite(13, LOW);
     }
   }
 
   //OR
   if (X && Y && !Z) {
-    if (C || D) {
-      digitalWrite(11, HIGH); //SEGUNDO BIT
+    if (A || B || C || D) {
+      digitalWrite(13, HIGH);
     } else {
-      digitalWrite(11, LOW); //SEGUNDO BIT
-    }
-    if (A || B) {
-      digitalWrite(13, HIGH); //PRIMER BIT
-    } else {
-      digitalWrite(13, LOW); //PRIMER BIT
+      digitalWrite(13, LOW);
     }
   }
 
   //XOR
   if (X && Y && Z) {
-    if (C ^ D) {
-      digitalWrite(11, HIGH); //SEGUNDO BIT
+    if (A ^ B ^ C ^ D) {
+      digitalWrite(13, HIGH);
     } else {
-      digitalWrite(11, LOW); //SEGUNDO BIT
-    }
-    if (A ^ B) {
-      digitalWrite(13, HIGH); //PRIMER BIT
-    } else {
-      digitalWrite(13, LOW); //PRIMER BIT
+      digitalWrite(13, LOW);
     }
   }
+ 
 }
